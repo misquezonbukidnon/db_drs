@@ -2,6 +2,7 @@
 
 @section('content')
 <div class="container">
+  @include('flash::message')
    <div class="row">
         <h3><b>List of Registered Devices</b></h3>
         <div class="col-md-12">
@@ -74,6 +75,6 @@
         } );
     </script>      
     <script>
-        $('div.alert').not('.alert-important').delay(3000).fadeOut(350);
+        $('div.alert').not('.alert-important').delay(5000).fadeOut(350);
     </script>
 @endsection

@@ -10,6 +10,18 @@
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
+                        
+                        <div class="form-group row">
+                            <label for="Role" class="col-md-4 col-form-label text-md-right">{{ __('Account Role') }}</label>
+
+                            <div class="col-md-6">
+                                <select class="custom-select" id="role" name="role" required>            
+                                    <option value="">Select Account Role</option>
+                                    <option value="1">Administrator</option>
+                                    <option value="0">Standard</option>
+                                 </select>
+                            </div>
+                        </div>
 
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
