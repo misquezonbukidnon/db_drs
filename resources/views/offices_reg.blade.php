@@ -5,7 +5,6 @@
 		<h3 align="center"><b>Add Office</b></h3>
 		<form action="{{ url('/createoffice') }}" method ="POST">
 			@csrf
-			@csrf
 			<div class="col-md-12">
 				<div class="card">
 					<div class="card-body">
@@ -35,8 +34,9 @@
 						                @foreach($officedata as $value)
 						                   <tr>
 						                       <td>{{ $value->office_name }}</td>
-						                       <td>
-						                           <a href="/editoffice/{{ $value->id }}" class="btn btn-sm btn-outline-primary">Edit</a>
+						                       <td align="center">
+						                           <a href="/editoffice/{{ $value->id }}" class="btn btn-sm btn-primary">Edit</a> 
+						                           <a href="/deleteoffice/{{ $value->id }}" class="btn btn-sm btn-danger">Delete</a>
 						                       </td>
 						                   </tr>
 						                @endforeach

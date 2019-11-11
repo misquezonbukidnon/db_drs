@@ -28,6 +28,12 @@ class OfficesController extends Controller
         return view('edit_office', compact('officedata'));
     }
 
+    Public function destroy(Request $request, $id){
+        $data = OfficeModel::findOrFail($id);
+        $data->delete();
+        flash('Succesfully Deleted')->success();
+        return back()->withInput();
+    }
 
     Public function update(Request $request, $id){
         $data = OfficeModel::findOrFail($id);

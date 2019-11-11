@@ -25,8 +25,8 @@
                        <td>{{ $value->devtypemodels->device_type }}</td>
                        <td>{{ $value->device_model }}</td>
                        <td>{{ $value->mac_address }} </td>                       
-                       <td>
-                           <a href="/devregedit/{{ $value->id }}" class="btn btn-sm btn-outline-primary">Edit</a>
+                       <td align="center">
+                           <a href="/devregedit/{{ $value->id }}" class="btn btn-sm btn-primary">Edit</a>
                        </td>
                    </tr>
                 @endforeach
@@ -52,8 +52,8 @@
                        <td>{{ $value->fullname }}</td>
                        <td>{{ $value->position }}</td>
                        <td>{{ $value->officemodels->office_name }} </td>
-                       <td>
-                           <a href="/edituser/{{ $value->id }}" class="btn btn-sm btn-outline-primary">Edit</a>
+                       <td align="center">
+                           <a href="/edituser/{{ $value->id }}" class="btn btn-sm btn-primary">Edit</a>
                        </td>
                    </tr>
                 @endforeach

@@ -27,6 +27,12 @@ class DeviceTypeController extends Controller
         return view('edit_device_type', compact('devtypedata'));
     }
 
+    Public function destroy(Request $request, $id){
+        $data = DevTypeModel::findOrFail($id);
+        $data->delete();
+        flash('Succesfully Deleted')->success();
+        return back()->withInput();
+    }
 
     Public function update(Request $request, $id){
         $data = DevTypeModel::findOrFail($id);

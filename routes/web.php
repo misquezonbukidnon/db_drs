@@ -33,6 +33,8 @@ Route::post('/updateuser/{id}', 'EndUsers@update')->middleware('CheckRole');
 //Get
 Route::get('/officereg', 'OfficesController@create');
 Route::get('/editoffice/{id}', 'OfficesController@edit')->middleware('CheckRole');
+Route::get('/deleteoffice/{id}', 'OfficesController@destroy')->middleware('CheckRole');
+
 //Post
 Route::post('/createoffice', 'OfficesController@store');
 Route::post('/updateoffice/{id}', 'OfficesController@update')->middleware('CheckRole');
@@ -42,9 +44,12 @@ Route::post('/updateoffice/{id}', 'OfficesController@update')->middleware('Check
 //Get
 Route::get('/devicetypereg', 'DeviceTypeController@create');
 Route::get('/editdevtype/{id}', 'DeviceTypeController@edit')->middleware('CheckRole'); 
+Route::get('/deletedevtype/{id}', 'DeviceTypeController@destroy')->middleware('CheckRole'); 
+
 //Post
 Route::post('/create', 'DeviceTypeController@store');
 Route::post('/updatedevtype/{id}', 'DeviceTypeController@update')->middleware('CheckRole');
+
 
 //Device Registration Controls
 //Get

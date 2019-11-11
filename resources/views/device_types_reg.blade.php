@@ -35,8 +35,9 @@
 						                @foreach($devtypedata as $value)
 						                   <tr>
 						                       <td>{{ $value->device_type }}</td>
-						                       <td>
-						                           <a href="/editdevtype/{{ $value->id }}" class="btn btn-sm btn-outline-primary">Edit</a>
+						                       <td align="center">
+						                           <a href="/editdevtype/{{ $value->id }}" class="btn btn-sm btn-primary">Edit</a>
+						                           <a href="/deletedevtype/{{ $value->id }}" class="btn btn-sm btn-danger">Delete</a>
 						                       </td>
 						                   </tr>
 						                @endforeach

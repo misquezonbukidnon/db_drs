@@ -18,8 +18,8 @@
                        <td>{{ $value->fullname }}</td>
                        <td>{{ $value->position }}</td>
                        <td>{{ $value->officemodels->office_name }} </td>
-                       <td>
-                           <a href="/devregselect/{{ $value->id }}" class="btn btn-sm btn-outline-primary">Select</a>
+                       <td align="center">
+                           <a href="/devregselect/{{ $value->id }}" class="btn btn-sm btn-primary">Select</a>
                        </td>
                    </tr>
                 @endforeach
