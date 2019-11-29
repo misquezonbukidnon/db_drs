@@ -23,10 +23,16 @@ class EndUsers extends Controller
     }
     
     Public function store(Request $request){
-    	
+
+    	$fullname = $request->input('fname');  
+        $fnameucword = ucwords($fullname);
+
+        $position = $request->input('position');
+        $positionucword = ucwords($position);
+
     	$data = new EndUsersModel;    	
-    	$data->fullname=$request->input('fname');
-    	$data->position=$request->input('position');
+    	$data->fullname=$fnameucword;
+    	$data->position=$positionucword;
     	$data->office_models_id=$request->input('office_id');
     	$data->save();
     	flash('Succesfully recorded')->success();
@@ -37,9 +43,15 @@ class EndUsers extends Controller
 
     Public function update(Request $request, $id)
     {
-        $data = EndUsersModel::findOrFail($id);     
-        $data->fullname=$request->input('fname');
-        $data->position=$request->input('position');
+        $fullname = $request->input('fname');  
+        $fnameucword = ucwords($fullname);
+
+        $position = $request->input('position');
+        $positionucword = ucwords($position);
+
+        $data = EndUsersModel::findOrFail($id);   
+        $data->fullname= $fnameucword;
+        $data->position= $positionucword;
         $data->office_models_id=$request->input('office_id');
         $data->save();
 

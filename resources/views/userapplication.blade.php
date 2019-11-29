@@ -13,13 +13,13 @@
 								{{--Fullname--}}
 								<div class="form-group">
 									<label for="exampleInputfname">Fullname</label>
-									<input type="text" class="form-control" id="exampleInputfname" name="fname" aria-describedby="fnameHelp" placeholder="Fullname" required>
+									<input type="text" class="form-control" id="exampleInputfname" name="fname" aria-describedby="fnameHelp" placeholder="Fullname" autocomplete="off" required>
 									<small id="lnameHelp" class="form-text text-muted">Please enter the Device User Fullname.</small>
 								</div>			
 								{{--Position--}}
 								<div class="form-group">
 									<label for="exampleInputPosition">Position</label>
-									<input type="text" class="form-control" id="exampleInputPosition" name="position" aria-describedby="positionHelp" placeholder="Position" required>
+									<input type="text" class="form-control" id="exampleInputPosition" name="position" aria-describedby="positionHelp" placeholder="Position" autocomplete="off" required>
 									<small id="positionHelp" class="form-text text-muted">Please enter the user position.</small>
 								</div>
 							</div>
@@ -32,7 +32,7 @@
 
 									<label for="exampleInputOffice">Office</label>
 
-									<select class="custom-select" name="office_id" placeholder="Select Office" required="">
+									<select class="custom-select" name="office_id" placeholder="Select Office" required>
 
 									<option>Select Office</option>							
 									@foreach ($data as $value)							

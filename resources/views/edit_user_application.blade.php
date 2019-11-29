@@ -26,13 +26,13 @@
 								{{--Fullname--}}
 								<div class="form-group">
 									<label for="exampleInputfname">Fullname</label>
-									<input type="text" class="form-control" id="exampleInputfname" name="fname" aria-describedby="fnameHelp" placeholder="Fullname" value="{{ $endusers->fullname }}" required>
+									<input type="text" class="form-control" id="exampleInputfname" name="fname" aria-describedby="fnameHelp" placeholder="Fullname" value="{{ $endusers->fullname }}" autocomplete="off" required>
 									<small id="lnameHelp" class="form-text text-muted">Please enter the Device User Fullname.</small>
 								</div>			
 								{{--Position--}}
 								<div class="form-group">
 									<label for="exampleInputPosition">Position</label>
-									<input type="text" class="form-control" id="exampleInputPosition" name="position" aria-describedby="positionHelp" placeholder="Position" value="{{ $endusers->position }}" required>
+									<input type="text" class="form-control" id="exampleInputPosition" name="position" aria-describedby="positionHelp" placeholder="Position" value="{{ $endusers->position }}" autocomplete="off" required>
 									<small id="positionHelp" class="form-text text-muted">Please enter the user position.</small>
 								</div>
 							</div>
