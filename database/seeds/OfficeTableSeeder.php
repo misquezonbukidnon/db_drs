@@ -25,7 +25,7 @@ class OfficeTableSeeder extends Seeder
         		'office_name' => 'MMO-Permits and Licenses Division'
         	],
         	[
-        		'office_name' => 'MMO-General Services Division'
+        		'office_name' => 'MMO-General Services Office'
         	],
         	[
         		'office_name' => 'MMO-Livelihood Division'

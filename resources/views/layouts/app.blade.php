@@ -44,7 +44,6 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ url('/home') }}">Home</a>
                         </li> 
-
                        
                         <li class="nav-item">
                             <a class="nav-link" href="{{ url('/devreg') }}">Device Registration</a>
@@ -53,6 +52,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ url('/userapplication') }}">End-User Registration</a>
                         </li>
+
 
                         <div class="dropdown">
                             <a class="nav-link" href="">Management Panel</a>
