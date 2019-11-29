@@ -45,6 +45,9 @@ class OfficeTableSeeder extends Seeder
         	[
         		'office_name' => 'MMO-Municipal Disaster Risk Reduction and Management Office'
         	],
+            [
+                'office_name' => 'MMO-Management Information System Division'
+            ],
         	[
         		'office_name' => 'MMO-Human Resource Management Office'
         	],
