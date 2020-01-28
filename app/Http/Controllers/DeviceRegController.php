@@ -11,6 +11,11 @@ use input;
 
 class DeviceRegController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     Public function create(){
     	$officedatas = OfficeModel::all();
     	$enduserdatas = EndUsersModel::all();
@@ -32,9 +37,12 @@ class DeviceRegController extends Controller
     }
 
     Public function editrecord($id){
-        $drdata = DevRegModel::findOrFail($id)->with('endusermodels', 'officemodels')->first();
+        // $drdata = DevRegModel::findOrFail($id)->with('endusermodels', 'officemodels')->first();
+        $drdata = DevRegModel::findOrFail($id);
+        $offices = OfficeModel::all();
+        $endusers = EndUsersModel::all();
         $devtypes = DevTypeModel::all();
-        return view('edit_device_registration', compact('drdata', 'devtypes'));
+        return view('edit_device_registration', compact('drdata', 'devtypes','endusers','offices'));
     }
 
     Public function store(Request $request){

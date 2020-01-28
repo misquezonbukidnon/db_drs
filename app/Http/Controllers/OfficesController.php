@@ -8,6 +8,11 @@ use input;
 
 class OfficesController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     Public function create(){
         $officedata = OfficeModel::all();
     	return view('offices_reg',compact('officedata'));

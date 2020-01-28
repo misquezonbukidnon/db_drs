@@ -9,8 +9,6 @@
            <table class="table table-striped" id="RegisteredDevices">
                <thead>
                    <th>User Name</th>
-                   <th>Position</th>
-                   <th>Office</th>
                    <th>Device Type</th>
                    <th>Device Model</th>
                    <th>MAC Address</th>                                    
@@ -20,8 +18,6 @@
                 @foreach($devregdata as $value)
                    <tr>
                        <td>{{ $value->endusermodels->fullname }}</td>
-                       <td>{{ $value->endusermodels->position }}</td>
-                       <td>{{ $value->officemodels->office_name }} </td>
                        <td>{{ $value->devtypemodels->device_type }}</td>
                        <td>{{ $value->device_model }}</td>
                        <td>{{ $value->mac_address }} </td>                       

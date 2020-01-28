@@ -9,6 +9,11 @@ use input;
 
 class EndUsers extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     Public function create(){
     	$data = OfficeModel::all();
     	return view('userapplication', compact('data'));

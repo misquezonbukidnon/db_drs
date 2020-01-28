@@ -8,6 +8,11 @@ use input;
 
 class DeviceTypeController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     Public function create(){
         $devtypedata = DevTypeModel::all();
     	return view('device_types_reg', compact('devtypedata'));
